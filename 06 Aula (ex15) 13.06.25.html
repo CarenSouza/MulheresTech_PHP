@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maior número</title>
 </head>
 <body>
     <script>
-// Ler 3 numeros do usuario  Encontrar o maior númeor entre 3 números //
+        // Ler 3 números do usuário
+        const numero1 = +(prompt("Digite o primeiro número:"));
+        const numero2 = +(prompt("Digite o segundo número:"));
+        const numero3 = +(prompt("Digite o terceiro número:"));
 
-const numero1 = +(prompt("digite um numero"))
-const numero2 = +(prompt("digite um numero"))
-const numero3 = +(prompt("digite um numero"))
+        // Verificar qual é o maior
+        if (numero1 >= numero2 && numero1 >= numero3) {
+            alert("O maior número é: " + numero1);
+        }
 
-if(numero1 >numero2){ if(numero > numero3)}
-alert("numero1 é maior")
+        if (numero2 >= numero1 && numero2 >= numero3) {
+            alert("O maior número é: " + numero2);
+        }
 
-if(numero1 >= numero2 && numero1 >= numero3){alert("Numero 1 é maior")}
-
-
+        if (numero3 >= numero1 && numero3 >= numero2) {
+            alert("O maior número é: " + numero3);
+        }
     </script>
 </body>
 </html>
-
