@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo Pedra, Papel ou Tesoura</title>
+</head>
+<body>
+
+    <h1>Jogo: Pedra, Papel ou Tesoura</h1>
+    <button onclick="jogar()">Jogar</button>
+
+    <script>
+        function jogar() {
+            // Pergunta ao jogador
+            let jogador = prompt("Escolha: pedra, papel ou tesoura");
+
+            // Opções para o computador
+            let opcoes = ["pedra", "papel", "tesoura"];
+            let computador = opcoes[Math.floor(Math.random() * 3)];
+
+            // Mostra a escolha do computador
+            alert("O computador escolheu: " + computador);
+
+            // Verifica o resultado
+            if (jogador == computador) {
+                alert("Empate!");
+            }
+            else if (jogador == "pedra" && computador == "tesoura") {
+                alert("Você ganhou! Pedra quebra tesoura.");
+            }
+            else if (jogador == "papel" && computador == "pedra") {
+                alert("Você ganhou! Papel embrulha pedra.");
+            }
+            else if (jogador == "tesoura" && computador == "papel") {
+                alert("Você ganhou! Tesoura corta papel.");
+            }
+            else if (jogador == "pedra" && computador == "papel") {
+                alert("Você perdeu! Papel embrulha pedra.");
+            }
+            else if (jogador == "papel" && computador == "tesoura") {
+                alert("Você perdeu! Tesoura corta papel.");
+            }
+            else if (jogador == "tesoura" && computador == "pedra") {
+                alert("Você perdeu! Pedra quebra tesoura.");
+            }
+            else {
+                alert("Escolha inválida! Tente digitar: pedra, papel ou tesoura.");
+            }
+        }
+    </script>
+
+</body>
+</html>
